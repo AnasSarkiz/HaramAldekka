@@ -16,7 +16,7 @@ const translations = {
     'nav.home': 'Home',
     'nav.about': 'About',
     'nav.language': 'العربية',
-    'hero.title': 'Haram aldekka',
+    'hero.title': 'HARAM ALDEKKA',
     'hero.subtitle': 'Your Trusted Partner in Mobile Phones & Electronics Import',
     'welcome': 'Welcome to Haram aldekka, a leading importer of high-quality mobile phones and electronic devices. With years of experience in the industry, we specialize in bringing the latest technology to our customers at competitive prices.',
     'mission': 'Our Mission',
@@ -31,8 +31,8 @@ const translations = {
     'email.us': 'Email Us',
     'footer.about': 'About Us',
     'footer.location': '📍 Location: Azzawiah, Libya',
-    'footer.phone': '📞 Phone: 0021892807050',
-    'footer.email': '✉️ Email: Luismarkis66@gmail.con',
+    'footer.phone': '📞 Phone: +218-929807050',
+    'footer.email': '✉️ Email: Mohamedalnaile0@gmail.com',
     'footer.rights': '© 2025 Haram aldekka. All rights reserved.'
   },
   ar: {
@@ -54,8 +54,8 @@ const translations = {
     'email.us': 'راسلنا',
     'footer.about': ' من نحن ',
     'footer.location': '📍 العنوان: الزاوية، ليبيا',
-    'footer.phone': '📞 الهاتف: 00218919827050',
-    'footer.email': '✉️ البريد الإلكتروني: Luismarkis66@gmail.con',
+    'footer.phone': '📞 الهاتف: 00218929807050',
+    'footer.email': '✉️ البريد الإلكتروني: Mohamedalnaile0@gmail.com',
     'footer.rights': '© 2025 هرم الدقـه. جميع الحقوق محفوظة.'
   }
 };
