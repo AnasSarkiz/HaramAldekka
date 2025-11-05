@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useLanguage, LanguageProvider } from './context/LanguageContext';
 
 const App = () => {
@@ -12,34 +13,80 @@ export default App;
 
 function AppContent() {
   const { t, toggleLanguage } = useLanguage();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
       <header className="bg-slate-600 text-white py-4 shadow-md">
-        <div className="container mx-auto flex justify-between items-center px-4">
-          <div className="flex items-center space-x-2">
-            {/* <img
-              src="https://via.placeholder.com/40"
-              alt="Logo"
-              className="w-10 h-10 rounded-full"
-            /> */}
-            <h1 className="text-2xl font-bold">HARAM ALDEKKA</h1>
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center">
+            <div className="flex items-center space-x-2">
+              <h1 className="text-2xl font-bold">HARAM ALDEKKA</h1>
+            </div>
+            
+            {/* Mobile menu button */}
+            <div className="md:hidden">
+              <button 
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="text-white hover:text-gray-300 focus:outline-none"
+                aria-label="Toggle menu"
+              >
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  {isMenuOpen ? (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  ) : (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  )}
+                </svg>
+              </button>
+            </div>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center space-x-6">
+              <a href="#home" className="hover:underline">
+                {t('nav.home')}
+              </a>
+              <a href="#about" className="hover:underline">
+                {t('nav.about')}
+              </a>
+              <button 
+                onClick={toggleLanguage} 
+                className="px-3 py-1 rounded-md bg-gray-200 text-gray-800 hover:bg-gray-300 transition-colors"
+              >
+                {t('nav.language')}
+              </button>
+            </nav>
           </div>
-          <nav className="space-x-6">
-            <a href="#home" className="hover:underline">
-              {t('nav.home')}
-            </a>
-            <a href="#about" className="hover:underline">
-              {t('nav.about')}
-            </a>
-            <button 
-              onClick={toggleLanguage} 
-              className="px-3 py-1 rounded-md bg-gray-200 hover:bg-gray-300 transition-colors"
-            >
-              {t('nav.language')}
-            </button>
-          </nav>
+
+          {/* Mobile Navigation */}
+          <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} mt-4 pb-4`}>
+            <div className="flex flex-col space-y-3">
+              <a 
+                href="#home" 
+                className="block px-3 py-2 hover:bg-slate-500 rounded"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('nav.home')}
+              </a>
+              <a 
+                href="#about" 
+                className="block px-3 py-2 hover:bg-slate-500 rounded"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('nav.about')}
+              </a>
+              <button 
+                onClick={() => {
+                  toggleLanguage();
+                  setIsMenuOpen(false);
+                }} 
+                className="w-full text-left px-3 py-2 hover:bg-slate-500 rounded text-left"
+              >
+                {t('nav.language')}
+              </button>
+            </div>
+          </div>
         </div>
       </header>
 
@@ -100,7 +147,7 @@ function AppContent() {
                 <div className="mt-12 pt-8 border-t border-gray-200">
                   <h3 className="text-2xl font-semibold text-gray-900 mb-6">{t('contact')}</h3>
                   <div className="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="tel:+218919827050" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-800">
+                    <a href="tel:+21892807050" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-800">
                       <svg className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>

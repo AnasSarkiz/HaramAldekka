@@ -31,7 +31,7 @@ const translations = {
     'email.us': 'Email Us',
     'footer.about': 'About Us',
     'footer.location': '📍 Location: Azzawiah, Libya',
-    'footer.phone': '📞 Phone: +218919827050',
+    'footer.phone': '📞 Phone: 0021892807050',
     'footer.email': '✉️ Email: info@haramaldekka.com',
     'footer.rights': '© 2025 Haram aldekka. All rights reserved.'
   },
