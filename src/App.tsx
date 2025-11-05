@@ -181,7 +181,7 @@ function AppContent() {
       <footer id="about" className="bg-gray-800 text-gray-300 py-6">
         <div className="container mx-auto px-4 text-center space-y-2">
           <h3 className="text-lg font-semibold text-white">{t('footer.about')}</h3>
-          <p>{t('footer.location')}</p>
+          <a className='hover:text-red-300' href='https://maps.app.goo.gl/KqkXuJ4p3n3iDBTg6'>{t('footer.location')}</a>
           <p>{t('footer.phone')}</p>
           <p>{t('footer.email')}</p>
           <p className="text-gray-500 text-sm mt-4">
