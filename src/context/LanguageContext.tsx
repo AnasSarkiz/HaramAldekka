@@ -32,7 +32,7 @@ const translations = {
     'footer.about': 'About Us',
     'footer.location': '📍 Location: Azzawiah, Libya',
     'footer.phone': '📞 Phone: +218-929807050',
-    'footer.email': '✉️ Email: Mohamedalnaile0@gmail.com',
+    'footer.email': '✉️ Email: Haramaldekka@gmail.com',
     'footer.rights': '© 2025 Haram aldekka. All rights reserved.'
   },
   ar: {
@@ -55,7 +55,7 @@ const translations = {
     'footer.about': ' من نحن ',
     'footer.location': '📍 العنوان: الزاوية، ليبيا',
     'footer.phone': '📞 الهاتف: 00218929807050',
-    'footer.email': '✉️ البريد الإلكتروني: Mohamedalnaile0@gmail.com',
+    'footer.email': '✉️ البريد الإلكتروني: Haramaldekka@gmail.com',
     'footer.rights': '© 2025 هرم الدقـه. جميع الحقوق محفوظة.'
   }
 };
